@@ -1,0 +1,20 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Department",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44363
+        }
+      ],
+      "UpstreamPathTemplate": "/Department",
+      "UpstreamHttpMethod": [ "GET", "Post", "Delete" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+
+  }
+}
