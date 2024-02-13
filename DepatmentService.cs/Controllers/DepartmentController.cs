@@ -16,7 +16,7 @@ namespace DepatmentService.cs.Controllers
         }
         [HttpGet]
 
-        public IEnumerable<Department> Get()
+        public IEnumerable<Department> GetAll()
         {
             return dbContext.Departments.ToList();
         }

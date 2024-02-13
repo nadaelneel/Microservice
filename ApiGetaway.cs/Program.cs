@@ -6,10 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddOcelot();
+//builder.Services.AddOcelot();
 
                   
-//builder.Configuration.AddJsonFile("Ocelot.json", optional: false, reloadOnChange: true);
+builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("Ocelot.json", optional: false, reloadOnChange: true);
+builder.Services.AddControllers();
+builder.Services.AddOcelot();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,7 +29,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.MapControllers();
 app.UseOcelot();
 
 app.MapRazorPages();

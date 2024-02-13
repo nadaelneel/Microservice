@@ -10,7 +10,7 @@
         }
       ],
       "UpstreamPathTemplate": "/Department",
-      "UpstreamHttpMethod": [ "GET", "Post", "Delete" ]
+      "UpstreamHttpMethod": [ "GET" ]
     }
 
   ],
